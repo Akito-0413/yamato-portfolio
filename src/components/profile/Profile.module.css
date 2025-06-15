@@ -1,0 +1,46 @@
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.profileName {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.profileJob {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profileDescription {
+  font-size: 2rem;
+  line-height: 1.8;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.link {
+  color: #00bcd4;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
