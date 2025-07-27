@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  color: #fff;
+  color: var(--foreground);
   text-align: center;
   padding-top: 5rem;
 }
@@ -12,13 +12,14 @@
 .profileName {
   font-size: 6rem;
   font-weight: bold;
-  color: #fff;
+  color: var;
   margin-bottom: 1rem;
 }
 
 .profileJob {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: var(--foreground);
 }
 
 .profileDescription {
@@ -26,6 +27,7 @@
   line-height: 1.8;
   max-width: 100%;
   margin-top: 2rem;
+  color: var(--foreground);
 }
 
 .profileImage {
