@@ -9,12 +9,12 @@ export default function Profile() {
       <Image
         src="/profile-yamato.jpg"
         alt="Profile Picture"
-        width={300}
-        height={300}
+        width={150}
+        height={150}
         className={styles.profileImage}
       />
       <div className={styles.profileDescription}>
-        I’m a software developer at GMO Internet Group.
+        I’m a software developer at GMO Internet, Inc.
         <br />
         Right now, I’m working on frontend web development.
       </div>
