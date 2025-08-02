@@ -16,7 +16,7 @@ export default function Profile() {
       <div className={styles.profileDescription}>
         I’m a software developer at GMO Internet, Inc.
         <br />
-        Right now, I’m working on frontend web development.
+        Currently, I’m working on frontend web development.
       </div>
     </div>
   );

@@ -1,6 +1,9 @@
 .techstackContainer {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin: 2rem 0;
+  width: 100%;
 }
 
 .heading {
@@ -14,6 +17,12 @@
   grid-template-columns: repeat(4, 80px);
   gap: 1.5rem;
   justify-content: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  backdrop-filter: blur(6px);
 }
 
 .techstachIcon {
@@ -23,8 +32,8 @@
 }
 
 .techstachImage {
-  width: 80px; /* 幅を固定 */
-  height: 80px; /* 高さを固定 */
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   border-radius: 8px;
 }
