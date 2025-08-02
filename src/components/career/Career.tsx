@@ -16,7 +16,7 @@ export default function Career() {
       alt: "GMOインターネットグループ株式会社",
       period: "2024/04 ~ 2024/12",
       company: "GMOインターネットグループ株式会社",
-      role: "Webアプリケーションエンジニアとして新卒入社\n社内外システムの開発・運用に携わる",
+      role: "Webアプリケーションエンジニアとして新卒入社\nWebアプリケーションの開発・運用に携わる",
       tags: ["#WebDevelopment"],
     },
     {
