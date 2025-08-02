@@ -6,11 +6,10 @@
   background-size: cover;
   color: var(--foreground);
   text-align: center;
-  padding-top: 5rem;
 }
 
 .profileName {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: bold;
   color: var;
   margin-bottom: 1rem;

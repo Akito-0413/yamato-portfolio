@@ -41,20 +41,46 @@
   align-items: flex-start;
 }
 
+.careerItem:first-child .careerIconArea::before {
+  top: 50%;
+  height: calc(50% + 20em);
+}
+
+.careerItem:last-child .careerIconArea::before {
+  top: -1.5em;
+  height: 50%;
+}
+
 .careerIconArea {
   flex-basis: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  height: 6em;
+}
+
+.careerIconArea::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -1.5em;
+  width: 6px;
+  height: calc(100% + 3em);
+  background: #7ec9e7;
+  transform: translateX(-50%);
+  z-index: 0;
 }
 
 .careerIcon {
+  position: relative;
+  z-index: 1;
   border-radius: 50%;
   width: 6em;
   height: 6em;
   object-fit: cover;
   background: #fff;
+  margin: 1em 0;
 }
 
 .careerContent {

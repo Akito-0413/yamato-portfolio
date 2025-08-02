@@ -4,7 +4,7 @@ import styles from "./Profile.module.css";
 export default function Profile() {
   return (
     <div className={styles.profileContainer}>
-      <h1 className={styles.profileName}>YamaTo</h1>
+      <h2 className={styles.profileName}>YamaTo</h2>
       <h2 className={styles.profileJob}>Software Developer</h2>
       <Image
         src="/profile-yamato.jpg"
