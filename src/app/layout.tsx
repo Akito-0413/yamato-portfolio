@@ -1,12 +1,10 @@
-import Header from "../components/Header/Header";
-import "../app/globals.css"; // グローバルCSSをインポート
+import "../app/globals.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Header /> {/* ヘッダーを固定表示 */}
-        <main>{children}</main> {/* 各ページのコンテンツ */}
+        <main>{children}</main>
       </body>
     </html>
   );
