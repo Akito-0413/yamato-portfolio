@@ -1,5 +1,5 @@
 import Profile from "../components/profile/Profile";
-import TechStack from "../components/techStack/TechStack";
+import TechStack from "../components/TechStack/TechStack";
 import Career from "../components/career/Career";
 
 export default function Home() {
