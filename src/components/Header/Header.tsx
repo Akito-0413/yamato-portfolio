@@ -1,19 +1,20 @@
 import styles from "./Header.module.css";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <a href="/" className={styles.logo}>
-          YamaTo's Portfolio
-        </a>
+        <Link href="/" className={styles.logo}>
+          Yamato's Blog
+        </Link>
         <nav className={styles.nav}>
-          <a href="/" className={styles.link}>
-            Top
-          </a>
-          <a href="/blog" className={styles.link}>
+          <Link href="/" className={styles.link}>
+            Home
+          </Link>
+          <Link href="/blog" className={styles.link}>
             Blog
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
