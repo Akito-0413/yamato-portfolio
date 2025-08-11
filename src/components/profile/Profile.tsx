@@ -13,9 +13,12 @@ export default function Profile() {
       />
       <h2 className={styles.profileName}>YamaTo</h2>
       <div className={styles.profileDescription}>
-        Webアプリケーションエンジニアとして、フロントエンドを中心に開発に携わっています。
+        ソフトウェアエンジニアとして
         <br />
-        Webアプリのアーキテクチャ設計やアクセシビリティの向上に加え
+        Webアプリを中心にフロントエンドからバックエンドまで幅広く開発に取り組んでいます。
+        <br />
+        <br />
+        アーキテクチャ設計やアクセシビリティの向上に加え
         <br />
         組織のブランド価値を高める取り組みにも関心を持っています。
         <br />
