@@ -15,7 +15,7 @@ export default function Profile() {
       <div className={styles.profileDescription}>
         ソフトウェアエンジニアとして
         <br />
-        Webアプリを中心にフロントエンドからバックエンドまで幅広く開発に取り組んでいます。
+        Webアプリのフロントエンドからバックエンドまで一貫して開発を行っています。
         <br />
         <br />
         アーキテクチャ設計やアクセシビリティの向上に加え
