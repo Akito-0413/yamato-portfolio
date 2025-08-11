@@ -7,8 +7,8 @@ export default function Profile() {
       <Image
         src="/profile-yamato.jpg"
         alt="Profile Picture"
-        width={150}
-        height={150}
+        width={200}
+        height={200}
         className={styles.profileImage}
       />
       <h2 className={styles.profileName}>YamaTo</h2>

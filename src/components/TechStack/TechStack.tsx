@@ -4,12 +4,12 @@ import styles from "./TechStack.module.css";
 const techStack = [
   { name: "React", src: "/react-logo.png" },
   { name: "Vue", src: "/vue-logo.png" },
-  { name: "JavaScript", src: "/javascript-logo.png" },
+  { name: "Next.js", src: "/nextjs-logo.png" },
   { name: "TypeScript", src: "/typescript-logo.png" },
   { name: "Java", src: "/java-logo.png" },
   { name: "AWS", src: "/aws-logo.png" },
   { name: "SpringBoot", src: "/springboot-logo.png" },
-  { name: "Docker", src: "/docker-logo.png" },
+  { name: "Dify", src: "/dify-logo.png" },
 ];
 
 export default function TechStack() {
