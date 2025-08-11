@@ -13,9 +13,22 @@ export default function Profile() {
       />
       <h2 className={styles.profileName}>YamaTo</h2>
       <div className={styles.profileDescription}>
-        I’m a software developer at GMO Internet, Inc.
+        Webアプリケーションエンジニアとして、フロントエンドを中心に開発に携わっています。
         <br />
-        Currently, I’m working on frontend web development.
+        Webアプリのアーキテクチャ設計やアクセシビリティの向上に加え
+        <br />
+        組織のブランド価値を高める取り組みにも関心を持っています。
+        <br />
+        <br />
+        <strong>「ホスピタリティを持ったエンジニア」</strong>
+        を目指して、ユーザーに最高の体験を提供することはもちろん
+        <br />
+        一緒に働く仲間がやりがいを感じ、持てる力を存分に発揮できる環境づくりにも力を注いでいます。
+        <br />
+        <br />
+        日々の出来事に一喜一憂せず、振り返りを通じて学びを蓄積し
+        <br />
+        「どうすればもっと良くできるか」を常に考えながら行動しています。
       </div>
     </div>
   );

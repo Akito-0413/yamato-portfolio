@@ -23,7 +23,7 @@
 }
 
 .profileDescription {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   max-width: 100%;
   margin-top: 2rem;
@@ -45,4 +45,15 @@
   margin-top: 2rem;
   font-size: 0.9rem;
   color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .profileContainer {
+    display: flex;
+  }
+
+  .profileDescription {
+    font-size: 1.3rem;
+    text-align: left;
+  }
 }
