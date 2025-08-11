@@ -35,3 +35,17 @@
   color: #7ec9e7;
   text-decoration: underline;
 }
+
+.backWrapBottom {
+  margin: 24px 0 0;
+}
+
+.backLink {
+  font-size: 0.95rem;
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}

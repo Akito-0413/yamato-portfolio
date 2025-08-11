@@ -1,38 +1,111 @@
-.headerContainer {
-  width: 100%;
+/* Header.module.css */
+
+.header {
   position: fixed;
-  top: 0;
-  left: 0;
-  background: #000000;
-  padding: 1rem 0;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80% - 2rem, 1200px);
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
-.headerNav {
+.container {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 8px;
 }
 
-.headerNavList {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.headerNavItem {
-}
-
-.headerNavLink {
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
   color: #fff;
   text-decoration: none;
-  font-size: 2rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
-.headerNavLink:hover {
-  color: #00bcd4;
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.link:hover {
+  color: #00bfff;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    top: 0.75rem;
+    padding: 8px 12px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .nav {
+    gap: 16px;
+  }
+  .link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+
+  .link {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    width: calc(85% - 1.5rem);
+    border-radius: 14px;
+    padding: 8px;
+  }
+
+  .nav {
+    gap: 6px;
+  }
+
+  .link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 }

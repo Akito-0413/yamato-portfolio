@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import Link from "next/link";
 import styles from "./BlogPost.module.css";
 
 type Params = {
@@ -50,6 +51,11 @@ export default function BlogPost({ title, date, content }: BlogPostProps) {
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <div className={styles.backWrapBottom}>
+        <Link href="/blog" className={styles.backLink}>
+          ← ブログ一覧へ戻る
+        </Link>
+      </div>
     </div>
   );
 }
