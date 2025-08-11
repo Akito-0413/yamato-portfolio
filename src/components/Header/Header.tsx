@@ -6,8 +6,9 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          Yamato's Blog
+          Yamato&apos;s Blog
         </Link>
+
         <nav className={styles.nav}>
           <Link href="/" className={styles.link}>
             Home
