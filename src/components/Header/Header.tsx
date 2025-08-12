@@ -14,7 +14,7 @@ export default function Header() {
             Career
           </Link>
           <Link href="#contact" className={styles.link}>
-            Conract
+            Contact
           </Link>
           <Link href="/blog" className={styles.link}>
             Blog
