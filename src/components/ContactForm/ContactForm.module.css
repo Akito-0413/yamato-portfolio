@@ -1,0 +1,121 @@
+.wrap {
+  max-width: 800px;
+  margin: 64px auto;
+  padding: 0 16px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.form {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 入力UI */
+.field {
+  display: grid;
+  gap: 8px;
+}
+.field label {
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid #cfd8dc;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 16px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: #2f80c9;
+  box-shadow: 0 0 0 3px rgba(47, 128, 201, 0.15);
+}
+
+.field :is(input, textarea):required:invalid:not(:placeholder-shown) {
+  border-color: #e06262;
+  box-shadow: 0 0 0 3px rgba(224, 98, 98, 0.15);
+}
+
+.button {
+  width: 100%;
+  background: #2f80c9;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.05s ease-in-out;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.form:has(:required:invalid:not(:placeholder-shown)) .button {
+  opacity: 0.5;
+  filter: grayscale(10%);
+  pointer-events: none;
+}
+
+.hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.alertError {
+  margin: 8px 0 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fdecea;
+  color: #b00020;
+  font-weight: 700;
+}
+
+.alertSendSuccess {
+  margin: 8px 0 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #e8f5e9;
+  color: #0a7d28;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    margin-top: 96px;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .form {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 14px;
+  }
+  .field label {
+    font-size: 0.95rem;
+  }
+  .field input,
+  .field textarea {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
