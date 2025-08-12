@@ -38,7 +38,7 @@ export default function ContactForm({
 
   return (
     <section className={styles.wrap}>
-      <h2 className={styles.title} id="contact">
+      <h2 className={styles.contactTitle} id="contact">
         Contact
       </h2>
 
