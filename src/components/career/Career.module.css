@@ -51,6 +51,15 @@
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+
+.careerItem:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .careerItem:first-child .careerIconArea::before {
@@ -140,6 +149,12 @@
 }
 
 @media (max-width: 600px) {
+  @media (hover: hover) and (pointer: fine) {
+    .careerItem:hover {
+      transform: translateY(-4px) scale(1.008);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+  }
   .careerSection {
     width: 100%;
     padding: 1rem 0;
