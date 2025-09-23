@@ -94,7 +94,6 @@
   vertical-align: middle;
 }
 
-/* 色分け */
 .badgeLocal {
   color: #0b2545;
   background: #7ec9e7;
@@ -102,12 +101,12 @@
 
 .badgeQiita {
   color: #ffffff;
-  background: #55c500; /* 黄緑 */
+  background: #55c500;
 }
 
 .badgeZenn {
   color: #ffffff;
-  background: #3ea8ff; /* 青 */
+  background: #3ea8ff;
 }
 
 @media (max-width: 1024px) {
