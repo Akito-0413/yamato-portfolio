@@ -84,6 +84,32 @@
   color: #7ec9e7;
 }
 
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+/* 色分け */
+.badgeLocal {
+  color: #0b2545;
+  background: #7ec9e7;
+}
+
+.badgeQiita {
+  color: #ffffff;
+  background: #55c500; /* 黄緑 */
+}
+
+.badgeZenn {
+  color: #ffffff;
+  background: #3ea8ff; /* 青 */
+}
+
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
