@@ -14,6 +14,16 @@ type PostItem = {
   external: boolean;
 };
 
+type QiitaItem = {
+  id: string;
+  title: string;
+  updated_at?: string;
+  created_at?: string;
+  rendered_body?: string | null;
+  body?: string | null;
+  url: string;
+};
+
 async function fetchQiitaItems(username?: string): Promise<PostItem[]> {
   if (!username) return [];
   try {
@@ -27,7 +37,7 @@ async function fetchQiitaItems(username?: string): Promise<PostItem[]> {
       }
     );
     if (!res.ok) return [];
-    const data: Array<any> = await res.json();
+    const data: QiitaItem[] = await res.json();
     return data.map((it) => ({
       id: `qiita_${it.id}`,
       title: it.title ?? "(no title)",
