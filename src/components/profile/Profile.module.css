@@ -9,13 +9,6 @@
   margin-top: 10rem;
 }
 
-.profileName {
-  font-size: 4rem;
-  font-weight: bold;
-  color: var;
-  margin-bottom: 1rem;
-}
-
 .profileJob {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -34,11 +27,12 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
 }
 
 .snsLinks {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

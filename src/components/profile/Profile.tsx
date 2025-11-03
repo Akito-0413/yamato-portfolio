@@ -12,7 +12,6 @@ export default function Profile() {
         height={200}
         className={styles.profileImage}
       />
-      <h2 className={styles.profileName}>YamaTo</h2>
       <div className={styles.snsLinks}>
         <Link
           href="https://x.com/touka_change"
