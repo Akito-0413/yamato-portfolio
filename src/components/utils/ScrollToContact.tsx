@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export default function ScrollToContact({
   trigger,
-  hash = "contact",
+  hash = 'contact',
 }: {
   trigger: boolean;
   hash?: string;
@@ -13,10 +13,10 @@ export default function ScrollToContact({
     if (!trigger) return;
 
     const newUrl = `${location.pathname}${location.search}#${hash}`;
-    history.replaceState(null, "", newUrl);
+    history.replaceState(null, '', newUrl);
 
     const el = document.getElementById(hash);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [trigger, hash]);
 
   return null;

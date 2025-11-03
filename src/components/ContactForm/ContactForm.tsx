@@ -1,6 +1,6 @@
-import { redirect } from "next/navigation";
-import styles from "./ContactForm.module.css";
-import { sendMail } from "@/lib/sendMail";
+import { redirect } from 'next/navigation';
+import styles from './ContactForm.module.css';
+import { sendMail } from '@/lib/sendMail';
 
 export default function ContactForm({
   errorMessage,
@@ -10,28 +10,28 @@ export default function ContactForm({
   sent?: boolean;
 }) {
   async function send(formData: FormData) {
-    "use server";
+    'use server';
     const toErr = (msg: string) =>
       redirect(`/?error=${encodeURIComponent(msg)}`);
-    const toSendSuccess = () => redirect("/?sent=1");
+    const toSendSuccess = () => redirect('/?sent=1');
 
-    const website = String(formData.get("website") || "").trim();
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const subject = String(formData.get("subject") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    const website = String(formData.get('website') || '').trim();
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const subject = String(formData.get('subject') || '').trim();
+    const message = String(formData.get('message') || '').trim();
 
-    if (website) toErr("不正な入力です。");
+    if (website) toErr('不正な入力です。');
     if (!name || !email || !subject || !message)
-      toErr("必須項目が不足しています。");
+      toErr('必須項目が不足しています。');
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      toErr("メールアドレスの形式が不正です。");
+      toErr('メールアドレスの形式が不正です。');
     if (message.length > 5000)
-      toErr("メッセージが長すぎます（最大5000文字）。");
+      toErr('メッセージが長すぎます（最大5000文字）。');
     try {
       await sendMail({ name, email, subject, message });
     } catch {
-      toErr("送信に失敗しました。時間を置いて再度お試しください。");
+      toErr('送信に失敗しました。時間を置いて再度お試しください。');
     }
     toSendSuccess();
   }

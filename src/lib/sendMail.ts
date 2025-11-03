@@ -1,6 +1,6 @@
 // src/lib/sendMail.ts
-import "server-only";
-import nodemailer from "nodemailer";
+import 'server-only';
+import nodemailer from 'nodemailer';
 
 export type SendMailPayload = {
   name: string;
@@ -18,11 +18,11 @@ export async function sendMail({
   const { CONTACT_TO, MAIL_USER, MAIL_APP_PASSWORD } = process.env;
 
   if (!CONTACT_TO || !MAIL_USER || !MAIL_APP_PASSWORD) {
-    throw new Error("メール送信の環境変数が不足しています。");
+    throw new Error('メール送信の環境変数が不足しています。');
   }
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+    host: 'smtp.gmail.com',
     port: 465,
     secure: true,
     auth: { user: MAIL_USER, pass: MAIL_APP_PASSWORD },
@@ -37,8 +37,8 @@ export async function sendMail({
       `Name   : ${name}`,
       `Email  : ${email}`,
       `Subject: ${subject}`,
-      "",
+      '',
       message,
-    ].join("\n"),
+    ].join('\n'),
   });
 }

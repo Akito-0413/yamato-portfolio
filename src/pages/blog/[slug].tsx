@@ -1,10 +1,10 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
-import Link from "next/link";
-import styles from "./BlogPost.module.css";
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
+import Link from 'next/link';
+import styles from './BlogPost.module.css';
 
 type Params = {
   slug: string;
@@ -17,17 +17,17 @@ type BlogPostProps = {
 };
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("content/blog"));
+  const files = fs.readdirSync(path.join('content/blog'));
   const paths = files.map((file) => ({
-    params: { slug: file.replace(".md", "") },
+    params: { slug: file.replace('.md', '') },
   }));
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }: { params: Params }) {
-  const filePath = path.join("content/blog", `${params.slug}.md`);
-  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const filePath = path.join('content/blog', `${params.slug}.md`);
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(fileContent);
 
   const processedContent = await remark().use(html).process(content);

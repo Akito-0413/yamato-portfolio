@@ -1,14 +1,15 @@
-import styles from "./Profile.module.css";
-import Link from "next/link";
-import profileImg from "./images/profile-yamato.jpg";
-import xLogo from "./images/x-logo.png";
-import zennLogo from "./images/zenn-logo.svg";
+import Image from 'next/image';
+import styles from './Profile.module.css';
+import Link from 'next/link';
+import profileImg from './images/profile-yamato.jpg';
+import xLogo from './images/x-logo.png';
+import zennLogo from './images/zenn-logo.svg';
 
 export default function Profile() {
   return (
     <div className={styles.profileContainer}>
-      <img
-        src={profileImg.src}
+      <Image
+        src={profileImg}
         alt="Profile Picture"
         width={200}
         height={200}
@@ -20,8 +21,8 @@ export default function Profile() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={xLogo.src}
+          <Image
+            src={xLogo}
             alt="X (Twitter)"
             width={30}
             height={30}
@@ -33,8 +34,8 @@ export default function Profile() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={zennLogo.src}
+          <Image
+            src={zennLogo}
             alt="zenn-logo.svg"
             width={30}
             height={30}

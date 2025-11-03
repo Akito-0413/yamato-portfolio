@@ -18,7 +18,7 @@
 }
 
 .careerTitle::after {
-  content: "";
+  content: '';
   display: block;
   height: 5px;
   width: 30%;
@@ -37,7 +37,7 @@
 }
 
 .careerList::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 60px;
   top: 0;
@@ -52,7 +52,9 @@
   gap: 1.5rem;
   align-items: flex-start;
   border-radius: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   will-change: transform, box-shadow;
   backface-visibility: hidden;
 }
@@ -85,7 +87,7 @@
 }
 
 .careerIconArea::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   top: 0;
