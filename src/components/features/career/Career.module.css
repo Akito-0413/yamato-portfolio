@@ -31,47 +31,20 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   padding: 0;
   margin: 0;
-}
-
-.careerList::before {
-  content: '';
-  position: absolute;
-  left: 60px;
-  top: 0;
-  width: 8px;
-  height: 80%;
-  background: #2da7ff;
-  z-index: 0;
 }
 
 .careerItem {
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: stretch;
   border-radius: 16px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
   will-change: transform, box-shadow;
   backface-visibility: hidden;
-}
-
-.careerItem:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.careerItem:first-child .careerIconArea::before {
-  top: 50%;
-  height: 50%;
-}
-
-.careerItem:last-child .careerIconArea::before {
-  top: 0;
-  height: 50%;
 }
 
 .careerIconArea {
@@ -83,7 +56,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 6em;
+  align-self: stretch;
+  height: auto;
+  min-height: 6em;
 }
 
 .careerIconArea::before {
@@ -91,9 +66,9 @@
   position: absolute;
   left: 50%;
   top: 0;
-  width: 6px;
-  height: 100%;
-  background: #7ec9e7;
+  bottom: 0;
+  width: 8px;
+  background: #2da7ff;
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -112,6 +87,7 @@
 .careerContent {
   flex-basis: 85%;
   background: transparent;
+  margin-bottom: 2rem;
 }
 
 .careerCompany {
@@ -151,12 +127,6 @@
 }
 
 @media (max-width: 600px) {
-  @media (hover: hover) and (pointer: fine) {
-    .careerItem:hover {
-      transform: translateY(-4px) scale(1.008);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-  }
   .careerSection {
     width: 100%;
     padding: 1rem 0;
@@ -165,8 +135,8 @@
     font-size: 2rem;
   }
   .careerIcon {
-    width: 4em;
-    height: 4em;
+    width: 5em;
+    height: 5em;
   }
   .careerCompany {
     font-size: 1.1rem;
@@ -178,7 +148,8 @@
     width: 80px;
     min-width: 80px;
     max-width: 80px;
-    height: 4em;
+    height: auto;
+    min-height: 4em;
   }
   .careerList::before {
     left: 40px;

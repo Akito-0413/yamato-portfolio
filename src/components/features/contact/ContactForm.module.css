@@ -32,7 +32,6 @@
   box-sizing: border-box;
 }
 
-/* 入力UI */
 .field {
   display: grid;
   gap: 8px;

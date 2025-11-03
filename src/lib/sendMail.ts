@@ -1,4 +1,3 @@
-// src/lib/sendMail.ts
 import 'server-only';
 import nodemailer from 'nodemailer';
 

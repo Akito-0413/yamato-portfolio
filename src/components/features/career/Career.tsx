@@ -47,17 +47,15 @@ export default function Career() {
               />
             </div>
             <div className={styles.careerContent}>
-              <div>
-                <span>{career.period}</span>
-                <h3 className={styles.careerCompany}>{career.company}</h3>
-                <div className={styles.careerRole}>{career.role}</div>
-                <div className={styles.careerTags}>
-                  {career.tags.map((tag, i) => (
-                    <span className={styles.careerTag} key={i}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <h3 className={styles.careerCompany}>{career.company}</h3>
+              <span>{career.period}</span>
+              <div className={styles.careerRole}>{career.role}</div>
+              <div className={styles.careerTags}>
+                {career.tags.map((tag, i) => (
+                  <span className={styles.careerTag} key={i}>
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
           </li>

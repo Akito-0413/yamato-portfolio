@@ -1,5 +1,3 @@
-# Gemini Code Assistant レポート
-
 ## プロジェクト: yamato-portfolio
 
 このレポートは、yamato-portfolioプロジェクトの概要、構造、使用技術、および開始方法について説明します。

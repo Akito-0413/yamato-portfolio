@@ -1,9 +1,9 @@
-import Header from '../components/Header/Header';
-import Profile from '../components/Profile/Profile';
-import TechStack from '../components/TechStack/TechStack';
-import Career from '../components/Career/Career';
-import ContactForm from '../components/ContactForm/ContactForm';
-import ScrollToContact from '../components/utils/ScrollToContact';
+import Header from '../components/features/header/Header';
+import Profile from '../components/features/profile/Profile';
+import TechStack from '../components/features/tech/TechStack';
+import Career from '../components/features/career/Career';
+import ContactForm from '../components/features/contact/ContactForm';
+import ScrollToContact from '../components/ui/utils/ScrollToContact';
 
 export default async function Home({
   searchParams,

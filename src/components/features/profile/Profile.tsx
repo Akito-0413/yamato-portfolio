@@ -4,6 +4,7 @@ import Link from 'next/link';
 import profileImg from './images/profile-yamato.jpg';
 import xLogo from './images/x-logo.png';
 import zennLogo from './images/zenn-logo.svg';
+import ExternalLink from '../../ui/Link/ExternalLink';
 
 export default function Profile() {
   return (
@@ -16,32 +17,15 @@ export default function Profile() {
         className={styles.profileImage}
       />
       <div className={styles.snsLinks}>
-        <Link
+        <ExternalLink
           href="https://x.com/touka_change"
-          target="_blank"
-          rel="noopener noreferrer"
+          className={styles.snsIcon}
         >
-          <Image
-            src={xLogo}
-            alt="X (Twitter)"
-            width={30}
-            height={30}
-            className={styles.snsIcon}
-          />
-        </Link>
-        <Link
-          href="https://zenn.dev/yama14"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src={zennLogo}
-            alt="zenn-logo.svg"
-            width={30}
-            height={30}
-            className={styles.snsIcon}
-          />
-        </Link>
+          <Image src={xLogo} alt="X (Twitter)" width={45} height={45} />
+        </ExternalLink>
+        <ExternalLink href="https://zenn.dev/yama14" className={styles.snsIcon}>
+          <Image src={zennLogo} alt="Zenn" width={45} height={45} />
+        </ExternalLink>
       </div>
       <div className={styles.profileDescription}>
         ソフトウェアエンジニアとして
