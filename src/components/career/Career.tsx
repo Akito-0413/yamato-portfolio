@@ -1,10 +1,11 @@
 import styles from "./Career.module.css";
-import Image from "next/image";
+import geeksalon from "./images/geeksalon.png";
+import gmo from "./images/gmo.png";
 
 export default function Career() {
   const careers = [
     {
-      icon: "/geeksalon.png",
+      icon: geeksalon,
       alt: "GeekSalon",
       period: "2021/06 ~ 2023/04",
       company: "GeekSalon",
@@ -12,7 +13,7 @@ export default function Career() {
       tags: ["#長期インターン", "#Mrk", "#Programming", "#HR"],
     },
     {
-      icon: "/gmo.png",
+      icon: gmo,
       alt: "GMOインターネットグループ株式会社",
       period: "2024/04 ~ 2024/12",
       company: "GMOインターネットグループ株式会社",
@@ -20,7 +21,7 @@ export default function Career() {
       tags: ["#WebDevelopment"],
     },
     {
-      icon: "/gmo.png",
+      icon: gmo,
       alt: "GMOインターネット株式会社",
       period: "2025/01~",
       company: "GMOインターネット株式会社",
@@ -36,8 +37,8 @@ export default function Career() {
         {careers.map((career, idx) => (
           <li className={styles.careerItem} key={idx}>
             <div className={styles.careerIconArea}>
-              <Image
-                src={career.icon}
+              <img
+                src={career.icon.src}
                 alt={career.alt}
                 width={96}
                 height={96}
