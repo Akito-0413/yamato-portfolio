@@ -13,6 +13,34 @@ export default function Profile() {
         className={styles.profileImage}
       />
       <h2 className={styles.profileName}>YamaTo</h2>
+      <div className={styles.snsLinks}>
+        <Link
+          href="https://x.com/touka_change"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/x-logo.png"
+            alt="X (Twitter)"
+            width={30}
+            height={30}
+            className={styles.snsIcon}
+          />
+        </Link>
+        <Link
+          href="https://zenn.dev/yama14"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/zenn-logo.svg"
+            alt="zenn-logo.svg"
+            width={30}
+            height={30}
+            className={styles.snsIcon}
+          />
+        </Link>
+      </div>
       <div className={styles.profileDescription}>
         ソフトウェアエンジニアとして
         <br />
