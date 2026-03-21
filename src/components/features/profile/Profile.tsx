@@ -5,56 +5,78 @@ import profileImg from './images/profile-yamato.jpg';
 import xLogo from './images/x-logo.png';
 import zennLogo from './images/zenn-logo.svg';
 import ExternalLink from '../../ui/Link/ExternalLink';
+import { SHOW_CONTACT_FORM } from '@/config/features';
 
 export default function Profile() {
   return (
-    <div className={styles.profileContainer}>
-      <Image
-        src={profileImg}
-        alt="Profile Picture"
-        width={200}
-        height={200}
-        className={styles.profileImage}
-      />
-      <div className={styles.snsLinks}>
-        <ExternalLink
-          href="https://x.com/touka_change"
-          className={styles.snsIcon}
-        >
-          <Image src={xLogo} alt="X (Twitter)" width={45} height={45} />
-        </ExternalLink>
-        <ExternalLink href="https://zenn.dev/yama14" className={styles.snsIcon}>
-          <Image src={zennLogo} alt="Zenn" width={45} height={45} />
-        </ExternalLink>
+    <section className={styles.profileContainer}>
+      <div className={styles.heroCard}>
+        <div className={styles.heroLayout}>
+          <div className={styles.heroAside}>
+            <div className={styles.heroBadge}>Software Engineer Portfolio</div>
+
+            <div className={styles.heroTopRow}>
+              <div className={styles.imageFrame}>
+                <Image
+                  src={profileImg}
+                  alt="Profile Picture"
+                  width={220}
+                  height={220}
+                  className={styles.profileImage}
+                />
+              </div>
+            </div>
+
+            <div className={styles.snsLinks}>
+              <ExternalLink
+                href="https://x.com/touka_change"
+                className={styles.snsIcon}
+              >
+                <Image src={xLogo} alt="X (Twitter)" width={45} height={45} />
+              </ExternalLink>
+              <ExternalLink
+                href="https://zenn.dev/yama14"
+                className={styles.snsIcon}
+              >
+                <Image src={zennLogo} alt="Zenn" width={45} height={45} />
+              </ExternalLink>
+            </div>
+          </div>
+
+          <div className={styles.profileDescription}>
+            ソフトウェアエンジニアとして
+            <br />
+            Webアプリのフロントエンドからバックエンドまで一貫して開発を行っています。
+            <br />
+            <br />
+            アーキテクチャ設計やユーザビリティの向上に加え
+            <br />
+            組織のブランド価値を高める取り組みにも関心を持っています。
+            <br />
+            <br />
+            ホスピタリティを軸に
+            <br />
+            <strong>①ユーザーの操作体験・エンジニアの開発体験の向上</strong>
+            <br />
+            <strong>
+              ②一緒に働く仲間がやりがいを感じ、持てる力を存分に発揮できる環境作り
+            </strong>
+            <br />
+            この2点を意識して日々の業務に取り組んでいます。
+            {SHOW_CONTACT_FORM ? (
+              <>
+                <br />
+                <br />
+                お仕事に関する相談は、
+                <Link href="#contact" className={styles.inlineLink}>
+                  お問い合わせフォーム
+                </Link>
+                からお気軽にご連絡ください。
+              </>
+            ) : null}
+          </div>
+        </div>
       </div>
-      <div className={styles.profileDescription}>
-        ソフトウェアエンジニアとして
-        <br />
-        Webアプリのフロントエンドからバックエンドまで一貫して開発を行っています。
-        <br />
-        <br />
-        アーキテクチャ設計やユーザビリティの向上に加え
-        <br />
-        組織のブランド価値を高める取り組みにも関心を持っています。
-        <br />
-        <br />
-        ホスピタリティを軸に
-        <br />
-        <strong>ユーザーの操作体験・エンジニアの開発体験の向上</strong>
-        <br />
-        <strong>
-          一緒に働く仲間がやりがいを感じ、持てる力を存分に発揮できる環境作り
-        </strong>
-        <br />
-        この2点を意識して日々の業務に取り組んでいます。
-        <br />
-        <br />
-        お仕事に関する相談は、
-        <Link href="#contact" className="text-black">
-          お問い合わせフォーム
-        </Link>
-        からお気軽にご連絡ください。
-      </div>
-    </div>
+    </section>
   );
 }

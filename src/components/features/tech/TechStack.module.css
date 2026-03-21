@@ -1,45 +1,113 @@
 .techstackContainer {
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin: 2rem 0;
+  margin: 2rem 0 3rem;
   width: 100%;
+  padding: 0 1.5rem;
+}
+
+.techstackInner {
+  width: min(960px, 100%);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.46);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+  text-align: center;
 }
 
 .heading {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  font-size: clamp(2rem, 1.6rem + 1vw, 2.8rem);
+  margin: 0 0 1.75rem;
+  color: var(--foreground);
 }
 
 .techstackGrid {
   display: grid;
-  grid-template-columns: repeat(4, 80px);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 1rem;
   justify-content: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  backdrop-filter: blur(6px);
+  padding: 0;
 }
 
 .techstachIcon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 1rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(16, 32, 51, 0.08);
+  box-shadow: 0 12px 24px rgba(16, 32, 51, 0.08);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
+  animation: floatIn 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .techstachImage {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 18px;
+  transition: transform 220ms ease;
+}
+
+.techstachIcon:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 0 18px 30px rgba(16, 32, 51, 0.14);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.techstachIcon:hover .techstachImage {
+  transform: scale(1.08) rotate(2deg);
 }
 
 .name {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 0.96rem;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 720px) {
+  .techstackGrid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .techstackContainer {
+    padding: 0 1rem;
+  }
+
+  .techstackInner {
+    border-radius: 24px;
+  }
+
+  .heading {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .techstachIcon,
+  .techstachImage {
+    animation: none;
+    transition: none;
+  }
 }
