@@ -4,9 +4,14 @@
   width: 96%;
   min-width: 320px;
   max-width: 900px;
-  padding: 2rem 0;
+  padding: 2.25rem;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
 }
 
 .careerTitle {
@@ -15,15 +20,6 @@
   font-size: 3rem;
   font-weight: bold;
   position: relative;
-}
-
-.careerTitle::after {
-  content: '';
-  display: block;
-  height: 5px;
-  width: 30%;
-  background: #000;
-  margin: 0.5rem auto 0 auto;
 }
 
 .careerList {
@@ -39,12 +35,23 @@
   display: flex;
   gap: 1.5rem;
   align-items: stretch;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
   border-radius: 16px;
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(16, 32, 51, 0.06);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
   will-change: transform, box-shadow;
   backface-visibility: hidden;
+}
+
+.careerItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 34px rgba(16, 32, 51, 0.12);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .careerIconArea {
@@ -87,7 +94,6 @@
 .careerContent {
   flex-basis: 85%;
   background: transparent;
-  margin-bottom: 2rem;
 }
 
 .careerCompany {
@@ -129,7 +135,8 @@
 @media (max-width: 600px) {
   .careerSection {
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem;
+    border-radius: 24px;
   }
   .careerTitle {
     font-size: 2rem;
@@ -153,5 +160,11 @@
   }
   .careerList::before {
     left: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .careerItem {
+    transition: none;
   }
 }

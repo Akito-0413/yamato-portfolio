@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 :root {
-  --background: linear-gradient(to bottom, #f4c4f3, #00f5a0, #00d9f5);
-  --foreground: #000000;
+  --background: linear-gradient(180deg, #fff7cb 0%, #c6fff3 42%, #95d3ff 100%);
+  --foreground: #102033;
+  --surface: rgba(255, 255, 255, 0.58);
+  --surface-strong: rgba(255, 255, 255, 0.78);
+  --border-soft: rgba(16, 32, 51, 0.12);
+  --shadow-soft: 0 20px 60px rgba(16, 32, 51, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,6 +25,112 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  color: inherit;
+}
+
+.pageShell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.pageContent {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 4rem;
+}
+
+.pageBackdrop {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pageBackdropGrid,
+.pageBackdropGlow,
+.pageBackdropNoise {
+  position: absolute;
+  inset: 0;
+}
+
+.pageBackdropGrid {
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.7) 0 14%, transparent 15%),
+    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 36px 36px, 36px 36px, 36px 36px;
+  animation: driftGrid 16s linear infinite;
+  mask-image: radial-gradient(circle at center, black 55%, transparent 95%);
+}
+
+.pageBackdropGlow {
+  filter: blur(24px);
+  opacity: 0.7;
+}
+
+.pageBackdropGlowOne {
+  inset: auto auto 8% -8%;
+  width: 38rem;
+  height: 38rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 196, 121, 0.75), transparent 65%);
+  animation: floatGlow 12s ease-in-out infinite;
+}
+
+.pageBackdropGlowTwo {
+  inset: 8% -10% auto auto;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(109, 213, 255, 0.7), transparent 62%);
+  animation: floatGlow 16s ease-in-out infinite reverse;
+}
+
+.pageBackdropNoise {
+  opacity: 0.14;
+  background-image:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.42) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.22) 25%, transparent 25%);
+  background-size: 24px 24px;
+  mix-blend-mode: soft-light;
+}
+
+.heroScene {
+  position: relative;
+  --pointer-x: 0px;
+  --pointer-y: 0px;
+  --pointer-glow-x: 50%;
+  --pointer-glow-y: 50%;
+}
+
+@keyframes driftGrid {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(36px, 36px, 0);
+  }
+}
+
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -24px, 0) scale(1.06);
+  }
 }
 
 @media (max-width: 600px) {
@@ -35,5 +153,17 @@ body {
   .profileImage {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .pageBackdropGrid,
+  .pageBackdropGlowOne,
+  .pageBackdropGlowTwo {
+    animation: none;
   }
 }

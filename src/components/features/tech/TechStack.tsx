@@ -22,20 +22,30 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <div className={styles.techstackContainer}>
-      <div className={styles.techstackGrid}>
-        {techStack.map((techstack) => (
-          <div key={techstack.name} className={styles.techstachIcon}>
-            <Image
-              src={techstack.src}
-              alt={`${techstack.name} logo`}
-              width={80}
-              height={80}
-              className={styles.techstachImage}
-            />
-          </div>
-        ))}
+    <section className={styles.techstackContainer} aria-labelledby="tech-stack">
+      <div className={styles.techstackInner}>
+        <h2 className={styles.heading} id="tech-stack">
+          Technology Stack
+        </h2>
+        <div className={styles.techstackGrid}>
+          {techStack.map((techstack, index) => (
+            <div
+              key={techstack.name}
+              className={styles.techstachIcon}
+              style={{ animationDelay: `${index * 90}ms` }}
+            >
+              <Image
+                src={techstack.src}
+                alt={`${techstack.name} logo`}
+                width={80}
+                height={80}
+                className={styles.techstachImage}
+              />
+              <span className={styles.name}>{techstack.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

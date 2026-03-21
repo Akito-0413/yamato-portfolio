@@ -10,7 +10,7 @@ export default function Career() {
       alt: 'GeekSalon',
       period: '2021/06 ~ 2023/04',
       company: 'GeekSalon',
-      role: 'Webサービス開発コースにメンターとしてジョイン\n大学生に向けてWebアプリケーション開発の支援、マーケティング、メンターの採用・育成業務に従事',
+      role: '大学生に向けてWebアプリ開発の支援、マーケティング、メンターの採用・育成業務に従事',
       tags: ['#長期インターン', '#Mrk', '#Programming', '#HR'],
     },
     {
@@ -27,7 +27,7 @@ export default function Career() {
       period: '2025/01~',
       company: 'GMOインターネット株式会社',
       role: '事業承継に伴い転籍。引き続き自社サービスの開発・運用に従事\nエンジニアの新卒採用や九州大学での講義の業務も担当',
-      tags: ['#WebDevelopment', '#HR'],
+      tags: ['#WebDevelopment', '#HR', '#Education'],
     },
   ];
 

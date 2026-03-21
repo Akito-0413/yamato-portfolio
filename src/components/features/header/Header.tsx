@@ -1,5 +1,6 @@
 import styles from './Header.module.css';
 import Link from 'next/link';
+import { SHOW_CONTACT_FORM } from '@/config/features';
 
 export default function Header() {
   return (
@@ -13,9 +14,11 @@ export default function Header() {
           <Link href="#career" className={styles.link}>
             Career
           </Link>
-          <Link href="#contact" className={styles.link}>
-            Contact
-          </Link>
+          {SHOW_CONTACT_FORM ? (
+            <Link href="#contact" className={styles.link}>
+              Contact
+            </Link>
+          ) : null}
           <Link href="/blog" className={styles.link}>
             Blog
           </Link>
