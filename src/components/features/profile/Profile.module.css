@@ -85,7 +85,7 @@
   place-items: center;
   transform: translate3d(calc(var(--pointer-x, 0px) * -0.45), calc(var(--pointer-y, 0px) * -0.45), 0);
   transition: transform 160ms ease-out;
-  animation: mobileFloat 6.8s ease-in-out infinite;
+  animation: mobileFloat 5.2s ease-in-out infinite;
 }
 
 .profileJob {
@@ -124,7 +124,7 @@
   margin-bottom: 0;
   transform: translate3d(calc(var(--pointer-x, 0px) * 0.22), calc(var(--pointer-y, 0px) * 0.22), 0);
   transition: transform 160ms ease-out;
-  animation: mobileDrift 8.5s ease-in-out infinite;
+  animation: mobileDrift 6.6s ease-in-out infinite;
 }
 
 .snsIcon {
@@ -237,13 +237,33 @@
 @keyframes mobileFloat {
   0%,
   100% {
-    transform: translate3d(calc(var(--pointer-x, 0px) * -0.45), calc(var(--pointer-y, 0px) * -0.45), 0);
+    transform: translate3d(
+      calc(var(--pointer-x, 0px) * -0.45 - 6px),
+      calc(var(--pointer-y, 0px) * -0.45 + 2px),
+      0
+    );
   }
 
-  50% {
+  30% {
     transform: translate3d(
-      calc(var(--pointer-x, 0px) * -0.45),
-      calc(var(--pointer-y, 0px) * -0.45 - 10px),
+      calc(var(--pointer-x, 0px) * -0.45 + 8px),
+      calc(var(--pointer-y, 0px) * -0.45 - 14px),
+      0
+    );
+  }
+
+  60% {
+    transform: translate3d(
+      calc(var(--pointer-x, 0px) * -0.45 - 4px),
+      calc(var(--pointer-y, 0px) * -0.45 - 20px),
+      0
+    );
+  }
+
+  85% {
+    transform: translate3d(
+      calc(var(--pointer-x, 0px) * -0.45 + 10px),
+      calc(var(--pointer-y, 0px) * -0.45 - 6px),
       0
     );
   }
@@ -252,13 +272,25 @@
 @keyframes mobileDrift {
   0%,
   100% {
-    transform: translate3d(calc(var(--pointer-x, 0px) * 0.22), calc(var(--pointer-y, 0px) * 0.22), 0);
+    transform: translate3d(
+      calc(var(--pointer-x, 0px) * 0.22 - 4px),
+      calc(var(--pointer-y, 0px) * 0.22 + 2px),
+      0
+    );
   }
 
-  50% {
+  35% {
     transform: translate3d(
-      calc(var(--pointer-x, 0px) * 0.22 + 4px),
-      calc(var(--pointer-y, 0px) * 0.22 - 6px),
+      calc(var(--pointer-x, 0px) * 0.22 + 8px),
+      calc(var(--pointer-y, 0px) * 0.22 - 10px),
+      0
+    );
+  }
+
+  70% {
+    transform: translate3d(
+      calc(var(--pointer-x, 0px) * 0.22 - 8px),
+      calc(var(--pointer-y, 0px) * 0.22 - 2px),
       0
     );
   }
