@@ -115,6 +115,133 @@
   flex-wrap: wrap;
 }
 
+.careerArticles {
+  margin-top: 0.85rem;
+}
+
+.articleToggle {
+  width: fit-content;
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.5rem;
+  border-radius: 999px;
+  color: #102033;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(16, 32, 51, 0.1);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.articleToggle::-webkit-details-marker {
+  display: none;
+}
+
+.articleToggle:hover {
+  background: rgba(45, 167, 255, 0.12);
+  border-color: rgba(45, 167, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.articleToggleIcon {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #2da7ff;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.careerArticles[open] .articleToggleIcon {
+  transform: rotate(90deg);
+}
+
+.articlePreviews {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.articlePreview {
+  width: min(100%, 520px);
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 148px minmax(0, 1fr);
+  overflow: hidden;
+  border-radius: 14px;
+  color: #102033;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(45, 167, 255, 0.28);
+  box-shadow: 0 10px 24px rgba(16, 32, 51, 0.08);
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.articlePreview:hover {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(45, 167, 255, 0.62);
+  box-shadow: 0 14px 28px rgba(16, 32, 51, 0.12);
+  transform: translateY(-3px);
+}
+
+.articleImageWrap {
+  position: relative;
+  min-height: 112px;
+  background: rgba(45, 167, 255, 0.1);
+}
+
+.articleImage {
+  object-fit: cover;
+}
+
+.articleText {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.85rem 1rem;
+}
+
+.articleSource {
+  color: #5b6b7d;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.articleTitle {
+  color: #0b5f96;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.articleAction {
+  width: fit-content;
+  margin-top: auto;
+  color: #0b5f96;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .careerTag {
   background: #2da7ff;
   color: #fff;
@@ -150,6 +277,20 @@
   }
   .careerRole {
     font-size: 0.9rem;
+  }
+  .articleToggle {
+    font-size: 0.85rem;
+  }
+  .articlePreview {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .articleImageWrap {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+  .articleTitle {
+    font-size: 0.95rem;
   }
   .careerIconArea {
     width: 80px;

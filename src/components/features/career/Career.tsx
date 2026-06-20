@@ -28,6 +28,16 @@ export default function Career() {
       company: 'GMOインターネット株式会社',
       role: '事業承継に伴い転籍。引き続き自社サービスの開発・運用に従事\nエンジニアの新卒採用や九州大学での講義の業務も担当',
       tags: ['#WebDevelopment', '#HR', '#Education'],
+      articles: [
+        {
+          title: 'エンジニアが学生と向き合う理由。採用の現場で見えてきたこと',
+          href: 'https://note.recruit.internet.gmo/n/nf5cc4aa4416b',
+          source: 'GMOインターネット 採用公式note',
+          image:
+            'https://assets.st-note.com/production/uploads/images/282730047/rectangle_large_type_2_f3d4594c821909cd2e2da2cd6b2dbf2f.png?fit=bounds&quality=85&width=1280',
+          imageAlt: 'note記事の見出し画像',
+        },
+      ],
     },
   ];
 
@@ -50,6 +60,48 @@ export default function Career() {
               <h3 className={styles.careerCompany}>{career.company}</h3>
               <span>{career.period}</span>
               <div className={styles.careerRole}>{career.role}</div>
+              {career.articles ? (
+                <details className={styles.careerArticles}>
+                  <summary className={styles.articleToggle}>
+                    <span className={styles.articleToggleIcon} aria-hidden="true">
+                      &gt;
+                    </span>
+                    <span>Related Articles</span>
+                  </summary>
+                  <div className={styles.articlePreviews}>
+                    {career.articles.map((article) => (
+                      <a
+                        className={styles.articlePreview}
+                        href={article.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={article.href}
+                      >
+                        <span className={styles.articleImageWrap}>
+                          <Image
+                            src={article.image}
+                            alt={article.imageAlt}
+                            fill
+                            sizes="(max-width: 600px) 100vw, 420px"
+                            className={styles.articleImage}
+                          />
+                        </span>
+                        <span className={styles.articleText}>
+                          <span className={styles.articleSource}>
+                            {article.source}
+                          </span>
+                          <span className={styles.articleTitle}>
+                            {article.title}
+                          </span>
+                          <span className={styles.articleAction}>
+                            Read Article
+                          </span>
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </details>
+              ) : null}
               <div className={styles.careerTags}>
                 {career.tags.map((tag, i) => (
                   <span className={styles.careerTag} key={i}>
